@@ -1,4 +1,0 @@
-mlruns/
-mlflow.db
-models/*.pkl
-__pycache__/

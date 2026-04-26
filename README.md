@@ -1,22 +1,49 @@
-🚀 Cloud Deployment
+# 🎬 Sentiment Analysis App
 
-This application is containerized using Docker and deployed on Microsoft Azure App Service.
+This project predicts whether a movie review is **positive or negative** using machine learning.
 
-Tech Stack:
-Python
-Scikit-learn
-MLflow
-Streamlit
-Docker
-GitHub Actions
-Microsoft Azure (App Service B1 Linux)
+## 📌 What I did
+- Cleaned text data using basic NLP preprocessing
+- Converted text into numerical features using TF-IDF
+- Trained multiple models (Logistic Regression, Naive Bayes, SVM)
+- Used MLflow to compare models and select the best one
+- Built a simple UI using Streamlit
+- Dockerized the app and deployed it on Azure
 
-Deployment Architecture:
+## 🚀 How to run locally
 
-Train ML model
-Build Docker image
-Push image to Docker Hub
-Azure pulls container image
-App runs publicly on Azure Web App
+1. Clone the repo  
+2. Install dependencies:
+   pip install -r requirements.txt  
 
-Live URL:https://sentiment-anushka-ml-drazebehahbfd9g0.centralindia-01.azurewebsites.net/
+3. Train the model:
+   python train.py  
+
+4. Run the app:
+   streamlit run streamlit_app.py  
+
+## 📸 Screenshots
+
+### 🔹 App Interface
+User enters a movie review and gets sentiment prediction.
+
+![App Screenshot](Images\app.png)
+
+
+### 🔹 Deployment Status
+Azure deployment success screen.
+
+![Deployment Screenshot](Images\Deployment.png)
+
+
+
+## ☁️ Deployment
+The app was deployed using Docker on Azure.
+
+## 🧠 Tech used
+- Python
+- Scikit-learn
+- MLflow
+- Streamlit
+- Docker
+- Azure

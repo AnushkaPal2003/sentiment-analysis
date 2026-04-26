@@ -1,7 +1,9 @@
 import streamlit as st
 import joblib
 
+# Load model and vectorizer
 model = joblib.load("models/model.pkl")
+vectorizer = joblib.load("models/vectorizer.pkl")
 
 st.title("🎬 Sentiment Analysis App")
 st.write("Enter a movie review and get sentiment prediction.")
@@ -13,7 +15,8 @@ if st.button("Predict"):
     if user_input.strip() == "":
         st.warning("Please enter a review.")
     else:
-        prediction = model.predict([user_input])[0]
+        transformed = vectorizer.transform([user_input])
+        prediction = model.predict(transformed)[0]
 
         if prediction == 1:
             st.success("Positive Sentiment 😊")
